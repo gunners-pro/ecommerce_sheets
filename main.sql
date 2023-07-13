@@ -13,3 +13,15 @@ create table client(
     Address varchar(30),
     constraint unique_cpf_client unique (CPF)
 );
+
+-- criar tabela produto
+
+create table product(
+	idProduct int auto_increment primary key,
+    Pname varchar(10) not null,
+    Classification_kids bool default false,
+    Category enum('Eletronico', 'Vestimenta', 'Brinquedos', 'Alimentos', 'Moveis') not null,
+    Avaliação float default 0,
+    Size varchar(10),
+    constraint unique_cpf_client unique (CPF)
+);
